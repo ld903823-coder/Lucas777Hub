@@ -1,4 +1,14 @@
--- PAINEL LUCAS - Script Local
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+
+local allowedUsers = {
+    [123456789] = true, -- TEU USERID
+}
+
+if not allowedUsers[plr.UserId] then
+    plr:Kick("Acesso negado | Lucas777")
+    return
+end-- PAINEL LUCAS - Script Local
 -- by ChatGPT (feito pra uso autorizado)
 
 local Players = game:GetService("Players")
